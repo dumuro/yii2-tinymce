@@ -16,10 +16,10 @@
       "homepage": "http://as-milano.ru/"
     }
   ],
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "require": {
     "yiisoft/yii2": "~2.0",
-    "bower-asset/tinymce-dist": "dev-master"
+    "bower-asset/tinymce": "~4.3"
   },
   "autoload": {
     "psr-4": {
