@@ -61,7 +61,7 @@ class TinyMceCompressorAction extends Action
     {
         $this->settings = array_merge(self::$defaultSettings, $this->settings);
 
-        $dir = Yii::getAlias('@bower/tinymce-dist');
+        $dir = Yii::getAlias('@bower/tinymce');
 
         if (empty($this->settings["cache_dir"])) {
             $this->settings["cache_dir"] = Yii::getAlias('@runtime');
