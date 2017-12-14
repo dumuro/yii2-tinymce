@@ -15,10 +15,7 @@ abstract class FileManager extends Object
     /**
      * Initialize FileManager component, registers required JS
      */
-    public function init()
-    {
-
-    }
+    public function init(){}
 
     /**
      * @return JsExpression JavaScript callback function
