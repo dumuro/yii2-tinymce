@@ -1,6 +1,6 @@
 <?php
 
-namespace milano\tinymce;
+namespace dumuro\tinymce;
 
 use Yii;
 use yii\helpers\Html;
@@ -203,7 +203,7 @@ class TinyMce extends InputWidget
         $id = $this->options['id'];
         $view = $this->getView();
 
-        $languagesDir = $view->getAssetManager()->getBundle(\milano\tinymce\TinyMceLangAsset::className())->baseUrl;
+        $languagesDir = $view->getAssetManager()->getBundle(\dumuro\tinymce\TinyMceLangAsset::className())->baseUrl;
         $languagesFile = "{$languagesDir}/langs/{$this->settings['language']}.js";
         $this->settings['language_url'] = $languagesFile;
 
@@ -228,7 +228,7 @@ class TinyMce extends InputWidget
                 TinyMceCompressorAction::scripUrl($this->compressorRoute, $opts),
                 [
                     'depends' => [
-                        'milano\tinymce\TinyMceAsset'
+                        'dumuro\tinymce\TinyMceAsset'
                     ]
                 ]
             );

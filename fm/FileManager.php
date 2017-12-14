@@ -1,5 +1,5 @@
 <?php
-namespace milano\tinymce\fm;
+namespace dumuro\tinymce\fm;
 
 use yii\base\Object;
 use yii\web\JsExpression;

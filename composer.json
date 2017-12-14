@@ -1,5 +1,5 @@
 {
-  "name": "as-milano/yii2-tinymce",
+  "name": "dumuro/yii2-tinymce",
   "description": "Yii2 extension to use TinyMce with Compressor and FileManager",
   "type": "yii2-extension",
   "keywords": [
@@ -11,19 +11,19 @@
   "license": "BSD-3-Clause",
   "authors": [
     {
-      "name": "NecroMan",
-      "email": "nm666@bk.ru",
-      "homepage": "http://as-milano.ru/"
+      "name": "Dumuro",
+      "email": "dumuro@gmail.com",
+      "homepage": "http://dumuro.ru/"
     }
   ],
   "minimum-stability": "stable",
   "require": {
     "yiisoft/yii2": "~2.0",
-    "bower-asset/tinymce": "~4.3"
+    "bower-asset/tinymce": "4.5.*"
   },
   "autoload": {
     "psr-4": {
-      "milano\\tinymce\\": ""
+      "dumuro\\tinymce\\": ""
     }
   }
 }

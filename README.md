@@ -21,11 +21,11 @@ The preferred way to install this extension is through [composer](https://getcom
 
 Either run
 
-`php composer.phar require --prefer-dist as-milano/yii2-tinymce "*"`
+`php composer.phar require --prefer-dist as-dumuro/yii2-tinymce "*"`
 
 or add
 
-`"as-milano/yii2-tinymce": "*"`
+`"as-dumuro/yii2-tinymce": "*"`
 
 to the require section of your `composer.json` file.
 
@@ -35,7 +35,7 @@ Usage
 ### Widget basic usage
 
 ```php
-$form->field($model, 'content')->widget(\milano\tinymce\TinyMce::className())
+$form->field($model, 'content')->widget(\dumuro\tinymce\TinyMce::className())
 ```
 
 ### Scripts compressor
@@ -47,7 +47,7 @@ At fist setup controller map:
 ```php
 'controllerMap' => [
     'tinyMce' => [
-        'class' => 'milano\tinymce\TinyMceController',
+        'class' => 'dumuro\tinymce\TinyMceController',
     ]
 ],
 ```
@@ -55,7 +55,7 @@ At fist setup controller map:
 Next add route to configured action to widget options:
 
 ```php
-$form->field($model, 'content')->widget(\milano\tinymce\TinyMce::className(), [
+$form->field($model, 'content')->widget(\dumuro\tinymce\TinyMce::className(), [
     'compressorRoute' => 'tinyMce/tinyMceCompressor'
 ])
 ```
@@ -100,9 +100,9 @@ Configure elFinder (more info [here](https://github.com/MihailDev/yii2-elfinder)
 Then select file manager provider in the widget:
 
 ```php
-$form->field($model, 'content')->widget(\milano\tinymce\TinyMce::className(), [
+$form->field($model, 'content')->widget(\dumuro\tinymce\TinyMce::className(), [
     'fileManager' => [
-        'class' => \milano\tinymce\fm\MihaildevElFinder::className()
+        'class' => \dumuro\tinymce\fm\MihaildevElFinder::className()
     ],
 ])
 ```
@@ -153,9 +153,9 @@ You can customize some window (width and height) and manager (language, filter, 
 and then point to required controller in the widget:
 
 ```php
-$form->field($model, 'content2')->widget(\milano\tinymce\TinyMce::className(), [
+$form->field($model, 'content2')->widget(\dumuro\tinymce\TinyMce::className(), [
     'fileManager' => [
-        'class' => \milano\tinymce\fm\MihaildevElFinder::className(),
+        'class' => \dumuro\tinymce\fm\MihaildevElFinder::className(),
         'controller' => 'elf2'
     ]
 ])
@@ -164,7 +164,7 @@ $form->field($model, 'content2')->widget(\milano\tinymce\TinyMce::className(), [
 ### Any file manager
 
 You can write your own file manager provider.
-Just inherit it from `\milano\tinymce\fm\FileManager` class and realize `getFileBrowserCallback` and `registerAsset` functions.
+Just inherit it from `\dumuro\tinymce\fm\FileManager` class and realize `getFileBrowserCallback` and `registerAsset` functions.
 
 ### Spellchecker 
 TinyMce has bundled plugin for spellchecking but it requires backed to work.
@@ -172,7 +172,7 @@ TinyMce has bundled plugin for spellchecking but it requires backed to work.
 You can use Yandex spellchecker service.
 
 ```php
-$form->field($model, 'content')->widget(\milano\tinymce\TinyMce::className(), [
+$form->field($model, 'content')->widget(\dumuro\tinymce\TinyMce::className(), [
     'spellcheckerUrl' => 'http://speller.yandex.net/services/tinyspell'
 ])
 ```
@@ -186,10 +186,10 @@ Or you can build own spellcheking service using code provided by moxicode:
 ### Combined features
 
 ```php
-<?= $form->field($model, 'content')->widget(\milano\tinymce\TinyMce::className(), [
+<?= $form->field($model, 'content')->widget(\dumuro\tinymce\TinyMce::className(), [
     'compressorRoute' => 'site/tinyMceCompressor',
     'fileManager' => [
-        'class' => \milano\tinymce\fm\MihaildevElFinder::className()
+        'class' => \dumuro\tinymce\fm\MihaildevElFinder::className()
     ],
     'spellcheckerUrl'=>'http://speller.yandex.net/services/tinyspell',
     'options' => ['rows' => 6]

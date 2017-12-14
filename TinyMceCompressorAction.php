@@ -1,5 +1,5 @@
 <?php
-namespace milano\tinymce;
+namespace dumuro\tinymce;
 
 use Yii;
 use yii\base\Action;

@@ -1,11 +1,15 @@
 <?php
-namespace milano\tinymce;
+namespace dumuro\tinymce;
 
+/**
+ * Class TinyMceLangAsset
+ * @package dumuro\tinymce
+ */
 class TinyMceLangAsset extends \yii\web\AssetBundle
 {
 
-    public $sourcePath = '@vendor/as-milano/yii2-tinymce/assets';
+    public $sourcePath = '@vendor/dumuro/yii2-tinymce/assets';
     public $depends = [
-        'milano\tinymce\TinyMceAsset'
+        'dumuro\tinymce\TinyMceAsset'
     ];
 }
