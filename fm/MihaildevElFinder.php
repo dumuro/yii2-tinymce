@@ -8,6 +8,10 @@ use yii\helpers\Url;
 use yii\web\JsExpression;
 use yii\web\View;
 
+/**
+ * Class MihaildevElFinder
+ * @package dumuro\tinymce\fm
+ */
 class MihaildevElFinder extends \dumuro\tinymce\fm\FileManager
 {
 
