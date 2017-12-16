@@ -1,4 +1,5 @@
 <?php
+
 namespace dumuro\tinymce;
 
 use Yii;
@@ -125,13 +126,13 @@ class TinyMceCompressorAction extends Action
         // Diskcache option
         $diskCache = self::getParam("diskcache");
         if ($diskCache) {
-            $this->settings["disk_cache"] = ($diskCache === "true");
+            $this->settings["disk_cache"] = ( $diskCache === "true" );
         }
 
         // Source or minified version
         $src = self::getParam("src");
         if ($src) {
-            $this->settings["source"] = ($src === "true");
+            $this->settings["source"] = ( $src === "true" );
         }
 
         // Add core js
@@ -192,8 +193,8 @@ class TinyMceCompressorAction extends Action
         $hash = md5(implode('', $allFiles) . $this->settings['baseUrl']);
 
         // Check if it supports gzip
-        $zlibOn = ini_get('zlib.output_compression') || (ini_set('zlib.output_compression', 0) === false);
-        $encodings = (isset($_SERVER['HTTP_ACCEPT_ENCODING'])) ? strtolower($_SERVER['HTTP_ACCEPT_ENCODING']) : "";
+        $zlibOn = ini_get('zlib.output_compression') || ( ini_set('zlib.output_compression', 0) === false );
+        $encodings = ( isset($_SERVER['HTTP_ACCEPT_ENCODING']) ) ? strtolower($_SERVER['HTTP_ACCEPT_ENCODING']) : "";
         $encoding = preg_match('/\b(x-gzip|gzip)\b/', $encodings, $match) ? $match[1] : "";
 
         // Is norton antivirus header
@@ -204,7 +205,7 @@ class TinyMceCompressorAction extends Action
         $supportsGzip = $this->settings['compress'] && !empty($encoding) && !$zlibOn && function_exists('gzencode');
 
         // Set cache file name
-        $cacheFile = $this->settings["cache_dir"] . "/tinymce.gzip-" . $hash . ($supportsGzip ? ".gz" : ".js");
+        $cacheFile = $this->settings["cache_dir"] . "/tinymce.gzip-" . $hash . ( $supportsGzip ? ".gz" : ".js" );
 
         // Set headers
         header("Content-type: text/javascript");
@@ -271,25 +272,25 @@ class TinyMceCompressorAction extends Action
 
         // Add plugins
         if (isset($settings["plugins"])) {
-            $urlParams['plugins'] = (is_array($settings["plugins"]) ? implode(',',
-                $settings["plugins"]) : $settings["plugins"]);
+            $urlParams['plugins'] = ( is_array($settings["plugins"]) ? implode(',',
+                $settings["plugins"]) : $settings["plugins"] );
         }
 
         // Add themes
         if (isset($settings["themes"])) {
-            $urlParams['themes'] = (is_array($settings["themes"]) ? implode(',',
-                $settings["themes"]) : $settings["themes"]);
+            $urlParams['themes'] = ( is_array($settings["themes"]) ? implode(',',
+                $settings["themes"]) : $settings["themes"] );
         }
 
         // Add languages
         if (isset($settings["languages"])) {
-            $urlParams['languages'] = (is_array($settings["languages"]) ? implode(',',
-                $settings["languages"]) : $settings["languages"]);
+            $urlParams['languages'] = ( is_array($settings["languages"]) ? implode(',',
+                $settings["languages"]) : $settings["languages"] );
         }
 
         // Add disk_cache
         if (isset($settings["disk_cache"])) {
-            $urlParams['diskcache'] = ($settings["disk_cache"] === true ? "true" : "false");
+            $urlParams['diskcache'] = ( $settings["disk_cache"] === true ? "true" : "false" );
         }
 
         // Add any explicitly specified files if the default settings have been overriden by the tag ones
@@ -300,13 +301,13 @@ class TinyMceCompressorAction extends Action
          * the TinyMCE root directory.  A typical use of this is to include a script which initiates the TinyMCE object.
          */
         if (isset($settings["files"])) {
-            $urlParams['files'] = (is_array($settings["files"]) ? implode(',',
-                $settings["files"]) : $settings["files"]);
+            $urlParams['files'] = ( is_array($settings["files"]) ? implode(',',
+                $settings["files"]) : $settings["files"] );
         }
 
         // Add src flag
         if (isset($settings["source"])) {
-            $urlParams['src'] = ($settings["source"] === true ? "true" : "false");
+            $urlParams['src'] = ( $settings["source"] === true ? "true" : "false" );
         }
 
         return Url::to([$route] + $urlParams, true);
@@ -315,7 +316,7 @@ class TinyMceCompressorAction extends Action
     /**
      * Returns a sanitized query string parameter.
      *
-     * @param String $name    Name of the query string param to get.
+     * @param String $name Name of the query string param to get.
      * @param String $default Default value if the query string item shouldn't exist.
      *
      * @return String Sanitized query string parameter value.

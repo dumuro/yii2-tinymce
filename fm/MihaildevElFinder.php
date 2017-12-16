@@ -1,4 +1,5 @@
 <?php
+
 namespace dumuro\tinymce\fm;
 
 use Yii;
@@ -8,9 +9,12 @@ use yii\helpers\Url;
 use yii\web\JsExpression;
 use yii\web\View;
 
+/**
+ * Class MihaildevElFinder
+ * @package dumuro\tinymce\fm
+ */
 class MihaildevElFinder extends \dumuro\tinymce\fm\FileManager
 {
-
     private $_id;
     private static $_counter = 0;
     private $managerUrl;
