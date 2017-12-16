@@ -10,6 +10,10 @@ use yii\web\JqueryAsset;
 use yii\web\View;
 use yii\widgets\InputWidget;
 
+/**
+ * Class TinyMce
+ * @package dumuro\tinymce
+ */
 class TinyMce extends InputWidget
 {
 

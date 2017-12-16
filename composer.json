@@ -16,10 +16,10 @@
       "homepage": "http://dumuro.ru/"
     }
   ],
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "require": {
     "yiisoft/yii2": "~2.0",
-    "bower-asset/tinymce": "4.5.*"
+    "bower/tinymce": "4.5.*"
   },
   "autoload": {
     "psr-4": {

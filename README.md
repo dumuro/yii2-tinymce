@@ -21,11 +21,11 @@ The preferred way to install this extension is through [composer](https://getcom
 
 Either run
 
-`php composer.phar require --prefer-dist as-dumuro/yii2-tinymce "*"`
+`php composer.phar require --prefer-dist dumuro/yii2-tinymce "*"`
 
 or add
 
-`"as-dumuro/yii2-tinymce": "*"`
+`"dumuro/yii2-tinymce": "*"`
 
 to the require section of your `composer.json` file.
 
