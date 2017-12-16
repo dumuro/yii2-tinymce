@@ -1,4 +1,5 @@
 <?php
+
 namespace dumuro\tinymce;
 
 use yii\web\Controller;

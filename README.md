@@ -195,3 +195,14 @@ Or you can build own spellcheking service using code provided by moxicode:
     'options' => ['rows' => 6]
 ]) ?>
 ```
+
+### Possible mistakes
+```php
+Invalid path alias: @bower-asset/tinymce
+.....
+'aliases' => [
+    '@bower' => '@vendor/bower-asset',
+    '@npm'   => '@vendor/npm-asset',
+],
+.....
+```

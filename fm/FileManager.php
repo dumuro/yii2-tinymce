@@ -11,7 +11,6 @@ use yii\web\View;
  */
 abstract class FileManager extends Object
 {
-
     /**
      * Initialize FileManager component, registers required JS
      */
