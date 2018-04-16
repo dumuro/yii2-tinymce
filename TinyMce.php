@@ -50,6 +50,11 @@ class TinyMce extends InputWidget
      */
     public $triggerSaveOnBeforeValidateForm = true;
 
+    /**
+     * @var string
+     */
+    public $selector = 'textarea';
+
     // TODO: Read existing files in assets/langs directory
     /** @var array Supported languages */
     private static $languages = array(
@@ -225,7 +230,6 @@ class TinyMce extends InputWidget
                 $opts["themes"] = $this->settings['theme'];
             }
 
-            //            $opts["languages"] = $this->settings['language'];
             $opts["files"] .= ',' . $languagesFile;
 
             $view->registerJsFile(
@@ -249,9 +253,9 @@ class TinyMce extends InputWidget
 
         $settings = Json::encode($this->settings);
 
-        $js[] = "$('#{$id}').tinymce({$settings});";
+        $js[] = "tinymce.init({$settings})";
         if ($this->triggerSaveOnBeforeValidateForm) {
-            $js[] = "$('#{$id}').parents('form').on('beforeValidate', function() { tinymce.triggerSave(); });";
+            $js[] = "$('{$this->selector}').parents('form').on('beforeValidate', function() { tinymce.triggerSave(); });";
         }
 
         $view->registerJs(implode("\n", $js));
