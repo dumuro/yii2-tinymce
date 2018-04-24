@@ -19,7 +19,7 @@
   "minimum-stability": "dev",
   "require": {
     "yiisoft/yii2": "~2.0",
-    "bower/tinymce": "4.7.*"
+    "bower/tinymce": "4.7.11"
   },
   "autoload": {
     "psr-4": {
