@@ -247,6 +247,10 @@ class TinyMce extends InputWidget
             $this->settings['file_browser_callback'] = $fm->getFileBrowserCallback();
         }
 
+        if( Yii::$app->getRequest()->getIsAjax() ) {
+            $js[] = "tinymce.remove()";
+        }
+
         $settings = Json::encode($this->settings);
 
         $js[] = "$('#{$id}').tinymce({$settings});";
