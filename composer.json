@@ -16,7 +16,7 @@
       "homepage": "http://dumuro.ru/"
     }
   ],
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "require": {
     "yiisoft/yii2": "~2.0",
     "bower/tinymce": "4.7.11"
