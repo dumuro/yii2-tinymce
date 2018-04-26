@@ -9,7 +9,7 @@ namespace dumuro\tinymce;
 class TinyMceAsset extends \yii\web\AssetBundle
 {
     /** @var string */
-    public $sourcePath = 'tinymce/tinymce';
+    public $sourcePath = '@vendor/tinymce/tinymce';
 
     /** @var array */
     public $depends = ['yii\web\JqueryAsset'];
