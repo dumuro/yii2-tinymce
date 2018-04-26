@@ -18,6 +18,6 @@ class TinyMceAsset extends \yii\web\AssetBundle
     {
         parent::init();
         $this->js[] = YII_DEBUG ? 'tinymce.js' : 'tinymce.min.js';
-        $this->js[] = YII_DEBUG ? 'tinymce.jquery.min.js' : 'tinymce.jquery.js';
+        $this->js[] = YII_DEBUG ? 'jquery.tinymce.js' : 'jquery.tinymce.min.js';
     }
 }
