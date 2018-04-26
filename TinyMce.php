@@ -255,6 +255,7 @@ class TinyMce extends InputWidget
             $js[] = "tinymce.remove()";
         }
 
+        $this->settings['selector'] = $this->selector;
         $settings = Json::encode($this->settings);
 
         $js[] = "tinymce.init({$settings})";
